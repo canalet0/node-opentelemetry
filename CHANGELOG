@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
  
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
+
+## [0.1.0] - 2023-10-30
+
+All chages are made following: https://opentelemetry.io/docs/instrumentation/js/manual/#acquiring-a-tracer
+ 
+### Added
+
+ - Jaeger.sh - script to run jaeger container
+ - Jaeger was added as tracing exporter for opentelemetry
+ - env.sh - script to export all necessary environment variables
+
+### Changed
+
+App architecture was changed in regards of contexts of files
  
 ## [0.1.0] - 2023-10-30
 
