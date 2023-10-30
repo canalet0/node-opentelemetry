@@ -12,8 +12,6 @@ const { Resource } = require('@opentelemetry/resources');
 const { SemanticResourceAttributes } = require('@opentelemetry/semantic-conventions');
 
 //exporters
-const { ConsoleSpanExporter } = require('@opentelemetry/sdk-trace-node');
-const { ConsoleMetricExporter } = require('@opentelemetry/sdk-metrics');
 const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-proto');
 const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-proto');
 
@@ -29,7 +27,6 @@ const sdk = new NodeSDK({
   metricReader: new PeriodicExportingMetricReader({exporter: new OTLPMetricExporter(),}),
   instrumentations: [getNodeAutoInstrumentations()],
 });
-
 
 sdk.start();
 
