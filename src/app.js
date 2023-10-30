@@ -1,6 +1,9 @@
 /*app.js*/
 const express = require('express');
 const { rollTheDice } = require('./api/dice.js');
+const { getTracer } = require('./utils/tracer.js');
+
+const tracer = getTracer();
 
 const PORT = parseInt(process.env.PORT || '8080');
 const app = express();
