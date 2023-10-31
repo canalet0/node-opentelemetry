@@ -1,6 +1,5 @@
 /*dice.js*/
-const { getTracer } = require('../utils/tracer.js');
-const tracer = getTracer();
+const { tracer } = require('../utils/tracer.js');
 
 function rollOnce(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
