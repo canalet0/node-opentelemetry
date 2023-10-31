@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Work in progress]
+
+Implementing logging
+The idea is to export logging into ELK stack
+    * ELK stack is been provided by https://github.com/deviantony/docker-elk/blob/main/README.md
+
 ## [0.2.1] - 2023-10-30
 
 All chages are made following: https://opentelemetry.io/docs/instrumentation/js/manual/#acquiring-a-tracer
