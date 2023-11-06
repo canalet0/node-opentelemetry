@@ -5,11 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Work in progress]
+## [0.3.0] - 2023-11-06
 
 Implementing logging
-The idea is to export logging into ELK stack
-    * ELK stack is been provided by https://github.com/deviantony/docker-elk/blob/main/README.md
+Elasticsearch x OpenTelemetry - https://www.elastic.co/guide/en/apm/guide/current/open-telemetry.html
+
+### Added
+- logger.js - centralized module to obtain and configure logging
+
+### Changed
+- Downgraded exporter-logs-otlp-http to 0.43 as 0.44 is not functional
 
 ## [0.2.1] - 2023-10-30
 
