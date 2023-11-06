@@ -19,10 +19,10 @@ const { OTLPMetricExporter } = require('@opentelemetry/exporter-metrics-otlp-pro
 const { PeriodicExportingMetricReader } = require('@opentelemetry/sdk-metrics');
 
 const sdk = new NodeSDK({
-  resource: new Resource({
-    [SemanticResourceAttributes.SERVICE_NAME]: OTL_SERVICE_NAME,
-    [SemanticResourceAttributes.SERVICE_VERSION]: OTL_SERVICE_VERSION,
-  }),
+    resource: new Resource({
+      [SemanticResourceAttributes.SERVICE_NAME]: OTL_SERVICE_NAME,
+      [SemanticResourceAttributes.SERVICE_VERSION]: OTL_SERVICE_VERSION,
+    }),
   traceExporter: new OTLPTraceExporter(),
   metricReader: new PeriodicExportingMetricReader({exporter: new OTLPMetricExporter(),}),
   instrumentations: [getNodeAutoInstrumentations()],

@@ -12,10 +12,7 @@ function rollTheDice(rolls, min, max) {
     // Create a span. A span must be closed.
     return tracer.startActiveSpan('rollTheDiceActiveSpan', (span) => {
       let logger = new Logger();
-      logger.info('log inside rollTheDiceActiveSpan');
-      logger.warn('log inside rollTheDiceActiveSpan');
-      logger.error('log inside rollTheDiceActiveSpan');
-      logger.debug('log inside rollTheDiceActiveSpan');
+      logger.info('log INFO inside rollTheDiceActiveSpan');
       const result = [];
       for (let i = 0; i < rolls; i++) {
         result.push(rollOnce(min, max));
