@@ -13,7 +13,9 @@ app.get('/rolldice', (req, res) => {
       .send("Request parameter 'rolls' is missing or not a number.");
     return;
   }
-  res.send(JSON.stringify(rollTheDice(rolls, 1, 6)));
+  res
+    .setHeader('Content-Type', 'application/json')
+    .send(JSON.stringify(rollTheDice(rolls, 1, 6)));
 });
 
 app.listen(PORT, () => {
