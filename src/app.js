@@ -1,4 +1,5 @@
 /*app.js*/
+const { context, propagation, trace } = require('@opentelemetry/api');
 const express = require('express');
 const { rollTheDice } = require('./api/dice.js');
 
@@ -7,6 +8,7 @@ const app = express();
 
 app.get('/rolldice', (req, res) => {
   const rolls = req.query.rolls ? parseInt(req.query.rolls.toString()) : NaN;
+  let activeContext = propagation.extract(context.active(), req.headers);
   if (isNaN(rolls)) {
     res
       .status(400)
